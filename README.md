@@ -46,4 +46,4 @@ Endpoint documentation and usage examples can be found in the attachment.
 Contact
 Your Name - yberin@gmail.com
 
-Project Link: https://github.com/your-username/your-repo
+Project Link: https://github.com/berin99/technical_backend_wcn_berin
