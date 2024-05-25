@@ -1,0 +1,1358 @@
+[2024-05-25 10:11:22] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 1000 bytes (Connection: mysql, SQL: alter table `users` add unique `users_email_unique`(`email`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 1000 bytes (Connection: mysql, SQL: alter table `users` add unique `users_email_unique`(`email`)) at E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:829)
+[stacktrace]
+#0 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(783): Illuminate\\Database\\Connection->runQueryCallback('alter table `us...', Array, Object(Closure))
+#1 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(588): Illuminate\\Database\\Connection->run('alter table `us...', Array, Object(Closure))
+#2 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(110): Illuminate\\Database\\Connection->statement('alter table `us...')
+#3 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(602): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(460): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(355): Illuminate\\Database\\Schema\\Builder->create('users', Object(Closure))
+#6 E:\\Projects\\Laravel\\math-class-booking\\database\\migrations\\2014_10_12_000000_create_users_table.php(22): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(493): Illuminate\\Database\\Migrations\\Migration@anonymous->up()
+#8 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(410): Illuminate\\Database\\Migrations\\Migrator->runMethod(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Migrations\\Migration@anonymous), 'up')
+#9 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(419): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#10 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(216): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(Illuminate\\Database\\Migrations\\Migration@anonymous), 'up')
+#11 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\View\\Components\\Task.php(37): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#12 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(756): Illuminate\\Console\\View\\Components\\Task->render('2014_10_12_0000...', Object(Closure))
+#13 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(216): Illuminate\\Database\\Migrations\\Migrator->write('Illuminate\\\\Cons...', '2014_10_12_0000...', Object(Closure))
+#14 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(181): Illuminate\\Database\\Migrations\\Migrator->runUp('E:\\\\Projects\\\\Lar...', 1, false)
+#15 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(124): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#16 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(92): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#17 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(633): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#18 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(104): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#19 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#20 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#21 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#22 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#23 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#24 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(211): Illuminate\\Container\\Container->call(Array)
+#25 E:\\Projects\\Laravel\\math-class-booking\\vendor\\symfony\\console\\Command\\Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#26 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(181): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#27 E:\\Projects\\Laravel\\math-class-booking\\vendor\\symfony\\console\\Application.php(1096): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 E:\\Projects\\Laravel\\math-class-booking\\vendor\\symfony\\console\\Application.php(324): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 E:\\Projects\\Laravel\\math-class-booking\\vendor\\symfony\\console\\Application.php(175): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 E:\\Projects\\Laravel\\math-class-booking\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 {main}
+
+[previous exception] [object] (PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 1000 bytes at E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:587)
+[stacktrace]
+#0 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(587): PDOStatement->execute()
+#1 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(816): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('alter table `us...', Array)
+#2 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(783): Illuminate\\Database\\Connection->runQueryCallback('alter table `us...', Array, Object(Closure))
+#3 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(588): Illuminate\\Database\\Connection->run('alter table `us...', Array, Object(Closure))
+#4 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(110): Illuminate\\Database\\Connection->statement('alter table `us...')
+#5 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(602): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#6 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(460): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#7 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(355): Illuminate\\Database\\Schema\\Builder->create('users', Object(Closure))
+#8 E:\\Projects\\Laravel\\math-class-booking\\database\\migrations\\2014_10_12_000000_create_users_table.php(22): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#9 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(493): Illuminate\\Database\\Migrations\\Migration@anonymous->up()
+#10 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(410): Illuminate\\Database\\Migrations\\Migrator->runMethod(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Migrations\\Migration@anonymous), 'up')
+#11 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(419): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#12 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(216): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(Illuminate\\Database\\Migrations\\Migration@anonymous), 'up')
+#13 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\View\\Components\\Task.php(37): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#14 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(756): Illuminate\\Console\\View\\Components\\Task->render('2014_10_12_0000...', Object(Closure))
+#15 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(216): Illuminate\\Database\\Migrations\\Migrator->write('Illuminate\\\\Cons...', '2014_10_12_0000...', Object(Closure))
+#16 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(181): Illuminate\\Database\\Migrations\\Migrator->runUp('E:\\\\Projects\\\\Lar...', 1, false)
+#17 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(124): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#18 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(92): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#19 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(633): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#20 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(104): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#21 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#22 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#23 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#24 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#25 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#26 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(211): Illuminate\\Container\\Container->call(Array)
+#27 E:\\Projects\\Laravel\\math-class-booking\\vendor\\symfony\\console\\Command\\Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#28 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(181): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#29 E:\\Projects\\Laravel\\math-class-booking\\vendor\\symfony\\console\\Application.php(1096): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 E:\\Projects\\Laravel\\math-class-booking\\vendor\\symfony\\console\\Application.php(324): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 E:\\Projects\\Laravel\\math-class-booking\\vendor\\symfony\\console\\Application.php(175): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 E:\\Projects\\Laravel\\math-class-booking\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 {main}
+"} 
+[2024-05-25 10:12:33] local.ERROR: Class "App\Providers\Schema" not found {"exception":"[object] (Error(code: 0): Class \"App\\Providers\\Schema\" not found at E:\\Projects\\Laravel\\math-class-booking\\app\\Providers\\AppServiceProvider.php:22)
+[stacktrace]
+#0 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#1 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#2 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#3 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#4 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#5 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1034): Illuminate\\Container\\Container->call(Array)
+#6 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1015): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#7 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 20)
+#8 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1016): array_walk(Array, Object(Closure))
+#9 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#10 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(263): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#11 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(447): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#12 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(199): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#13 E:\\Projects\\Laravel\\math-class-booking\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 {main}
+"} 
+[2024-05-25 10:13:11] local.ERROR: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'users' already exists (Connection: mysql, SQL: create table `users` (`id` bigint unsigned not null auto_increment primary key, `name` varchar(191) not null, `email` varchar(191) not null, `email_verified_at` timestamp null, `password` varchar(191) not null, `remember_token` varchar(100) null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'users' already exists (Connection: mysql, SQL: create table `users` (`id` bigint unsigned not null auto_increment primary key, `name` varchar(191) not null, `email` varchar(191) not null, `email_verified_at` timestamp null, `password` varchar(191) not null, `remember_token` varchar(100) null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') at E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:829)
+[stacktrace]
+#0 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(783): Illuminate\\Database\\Connection->runQueryCallback('create table `u...', Array, Object(Closure))
+#1 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(588): Illuminate\\Database\\Connection->run('create table `u...', Array, Object(Closure))
+#2 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(110): Illuminate\\Database\\Connection->statement('create table `u...')
+#3 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(602): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(460): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(355): Illuminate\\Database\\Schema\\Builder->create('users', Object(Closure))
+#6 E:\\Projects\\Laravel\\math-class-booking\\database\\migrations\\2014_10_12_000000_create_users_table.php(22): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(493): Illuminate\\Database\\Migrations\\Migration@anonymous->up()
+#8 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(410): Illuminate\\Database\\Migrations\\Migrator->runMethod(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Migrations\\Migration@anonymous), 'up')
+#9 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(419): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#10 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(216): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(Illuminate\\Database\\Migrations\\Migration@anonymous), 'up')
+#11 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\View\\Components\\Task.php(37): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#12 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(756): Illuminate\\Console\\View\\Components\\Task->render('2014_10_12_0000...', Object(Closure))
+#13 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(216): Illuminate\\Database\\Migrations\\Migrator->write('Illuminate\\\\Cons...', '2014_10_12_0000...', Object(Closure))
+#14 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(181): Illuminate\\Database\\Migrations\\Migrator->runUp('E:\\\\Projects\\\\Lar...', 1, false)
+#15 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(124): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#16 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(92): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#17 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(633): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#18 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(104): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#19 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#20 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#21 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#22 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#23 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#24 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(211): Illuminate\\Container\\Container->call(Array)
+#25 E:\\Projects\\Laravel\\math-class-booking\\vendor\\symfony\\console\\Command\\Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#26 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(181): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#27 E:\\Projects\\Laravel\\math-class-booking\\vendor\\symfony\\console\\Application.php(1096): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 E:\\Projects\\Laravel\\math-class-booking\\vendor\\symfony\\console\\Application.php(324): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 E:\\Projects\\Laravel\\math-class-booking\\vendor\\symfony\\console\\Application.php(175): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 E:\\Projects\\Laravel\\math-class-booking\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 {main}
+
+[previous exception] [object] (PDOException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'users' already exists at E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:587)
+[stacktrace]
+#0 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(587): PDOStatement->execute()
+#1 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(816): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('create table `u...', Array)
+#2 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(783): Illuminate\\Database\\Connection->runQueryCallback('create table `u...', Array, Object(Closure))
+#3 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(588): Illuminate\\Database\\Connection->run('create table `u...', Array, Object(Closure))
+#4 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(110): Illuminate\\Database\\Connection->statement('create table `u...')
+#5 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(602): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#6 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(460): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#7 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(355): Illuminate\\Database\\Schema\\Builder->create('users', Object(Closure))
+#8 E:\\Projects\\Laravel\\math-class-booking\\database\\migrations\\2014_10_12_000000_create_users_table.php(22): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#9 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(493): Illuminate\\Database\\Migrations\\Migration@anonymous->up()
+#10 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(410): Illuminate\\Database\\Migrations\\Migrator->runMethod(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Migrations\\Migration@anonymous), 'up')
+#11 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(419): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#12 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(216): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(Illuminate\\Database\\Migrations\\Migration@anonymous), 'up')
+#13 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\View\\Components\\Task.php(37): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#14 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(756): Illuminate\\Console\\View\\Components\\Task->render('2014_10_12_0000...', Object(Closure))
+#15 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(216): Illuminate\\Database\\Migrations\\Migrator->write('Illuminate\\\\Cons...', '2014_10_12_0000...', Object(Closure))
+#16 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(181): Illuminate\\Database\\Migrations\\Migrator->runUp('E:\\\\Projects\\\\Lar...', 1, false)
+#17 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(124): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#18 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(92): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#19 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(633): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#20 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(104): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#21 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#22 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#23 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#24 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#25 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#26 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(211): Illuminate\\Container\\Container->call(Array)
+#27 E:\\Projects\\Laravel\\math-class-booking\\vendor\\symfony\\console\\Command\\Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#28 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(181): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#29 E:\\Projects\\Laravel\\math-class-booking\\vendor\\symfony\\console\\Application.php(1096): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 E:\\Projects\\Laravel\\math-class-booking\\vendor\\symfony\\console\\Application.php(324): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 E:\\Projects\\Laravel\\math-class-booking\\vendor\\symfony\\console\\Application.php(175): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 E:\\Projects\\Laravel\\math-class-booking\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 {main}
+"} 
+[2024-05-25 10:18:46] local.ERROR: foreach() argument must be of type array|object, string given {"exception":"[object] (ErrorException(code: 0): foreach() argument must be of type array|object, string given at E:\\Projects\\Laravel\\math-class-booking\\app\\Http\\Controllers\\BookingController.php:18)
+[stacktrace]
+#0 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(255): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'foreach() argum...', 'E:\\\\Projects\\\\Lar...', 18)
+#1 E:\\Projects\\Laravel\\math-class-booking\\app\\Http\\Controllers\\BookingController.php(18): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'foreach() argum...', 'E:\\\\Projects\\\\Lar...', 18)
+#2 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\BookingController->getAvailableClasses()
+#3 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('getAvailableCla...', Array)
+#4 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(260): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\BookingController), 'getAvailableCla...')
+#5 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#6 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(806): Illuminate\\Routing\\Route->run()
+#7 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#8 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#10 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#11 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(135): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#12 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#13 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#14 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#16 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#17 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#18 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#19 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#20 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#21 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#37 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#38 E:\\Projects\\Laravel\\math-class-booking\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#39 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('E:\\\\Projects\\\\Lar...')
+#40 {main}
+"} 
+[2024-05-25 10:21:17] local.ERROR: foreach() argument must be of type array|object, string given {"exception":"[object] (ErrorException(code: 0): foreach() argument must be of type array|object, string given at E:\\Projects\\Laravel\\math-class-booking\\app\\Http\\Controllers\\BookingController.php:18)
+[stacktrace]
+#0 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(255): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'foreach() argum...', 'E:\\\\Projects\\\\Lar...', 18)
+#1 E:\\Projects\\Laravel\\math-class-booking\\app\\Http\\Controllers\\BookingController.php(18): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'foreach() argum...', 'E:\\\\Projects\\\\Lar...', 18)
+#2 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\BookingController->getAvailableClasses()
+#3 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('getAvailableCla...', Array)
+#4 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(260): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\BookingController), 'getAvailableCla...')
+#5 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#6 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(806): Illuminate\\Routing\\Route->run()
+#7 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#8 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#10 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#11 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(135): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#12 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#13 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#14 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#16 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#17 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#18 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#19 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#20 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#21 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#37 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#38 E:\\Projects\\Laravel\\math-class-booking\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#39 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('E:\\\\Projects\\\\Lar...')
+#40 {main}
+"} 
+[2024-05-25 10:23:36] local.ERROR: foreach() argument must be of type array|object, string given {"exception":"[object] (ErrorException(code: 0): foreach() argument must be of type array|object, string given at E:\\Projects\\Laravel\\math-class-booking\\app\\Http\\Controllers\\BookingController.php:18)
+[stacktrace]
+#0 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(255): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'foreach() argum...', 'E:\\\\Projects\\\\Lar...', 18)
+#1 E:\\Projects\\Laravel\\math-class-booking\\app\\Http\\Controllers\\BookingController.php(18): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'foreach() argum...', 'E:\\\\Projects\\\\Lar...', 18)
+#2 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\BookingController->getAvailableClasses()
+#3 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('getAvailableCla...', Array)
+#4 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(260): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\BookingController), 'getAvailableCla...')
+#5 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#6 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(806): Illuminate\\Routing\\Route->run()
+#7 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#8 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#10 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#11 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(135): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#12 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#13 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#14 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#16 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#17 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#18 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#19 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#20 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#21 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#37 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#38 E:\\Projects\\Laravel\\math-class-booking\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#39 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('E:\\\\Projects\\\\Lar...')
+#40 {main}
+"} 
+[2024-05-25 10:26:09] local.ERROR: foreach() argument must be of type array|object, string given {"exception":"[object] (ErrorException(code: 0): foreach() argument must be of type array|object, string given at E:\\Projects\\Laravel\\math-class-booking\\app\\Http\\Controllers\\BookingController.php:18)
+[stacktrace]
+#0 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(255): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'foreach() argum...', 'E:\\\\Projects\\\\Lar...', 18)
+#1 E:\\Projects\\Laravel\\math-class-booking\\app\\Http\\Controllers\\BookingController.php(18): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'foreach() argum...', 'E:\\\\Projects\\\\Lar...', 18)
+#2 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\BookingController->getAvailableClasses()
+#3 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('getAvailableCla...', Array)
+#4 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(260): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\BookingController), 'getAvailableCla...')
+#5 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#6 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(806): Illuminate\\Routing\\Route->run()
+#7 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#8 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#10 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#11 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(135): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#12 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#13 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#14 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#16 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#17 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#18 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#19 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#20 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#21 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#37 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#38 E:\\Projects\\Laravel\\math-class-booking\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#39 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('E:\\\\Projects\\\\Lar...')
+#40 {main}
+"} 
+[2024-05-25 11:12:09] local.INFO: Requested Day: monday  
+[2024-05-25 11:12:09] local.INFO: Requested Time: 10:01  
+[2024-05-25 11:12:09] local.INFO: Timetable: Array
+(
+    [monday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+    [wednesday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+)
+  
+[2024-05-25 11:14:12] local.INFO: Requested Day: monday  
+[2024-05-25 11:14:12] local.INFO: Requested Time: 10:00  
+[2024-05-25 11:14:12] local.INFO: Timetable: Array
+(
+    [monday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+    [wednesday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+)
+  
+[2024-05-25 11:14:44] local.INFO: Requested Day: monday  
+[2024-05-25 11:14:44] local.INFO: Requested Time: 10:00  
+[2024-05-25 11:14:44] local.INFO: Timetable: Array
+(
+    [monday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+    [wednesday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+)
+  
+[2024-05-25 11:14:47] local.INFO: Requested Day: monday  
+[2024-05-25 11:14:47] local.INFO: Requested Time: 10:00  
+[2024-05-25 11:14:47] local.INFO: Timetable: Array
+(
+    [monday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+    [wednesday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+)
+  
+[2024-05-25 11:16:20] local.INFO: Requested Day: monday  
+[2024-05-25 11:16:20] local.INFO: Requested Time: 10:00  
+[2024-05-25 11:16:20] local.INFO: Timetable: Array
+(
+    [monday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+    [wednesday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+)
+  
+[2024-05-25 11:16:22] local.INFO: Requested Day: monday  
+[2024-05-25 11:16:22] local.INFO: Requested Time: 10:00  
+[2024-05-25 11:16:22] local.INFO: Timetable: Array
+(
+    [monday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+    [wednesday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+)
+  
+[2024-05-25 11:17:28] local.INFO: Requested Day: monday  
+[2024-05-25 11:17:28] local.INFO: Requested Time: 10:00  
+[2024-05-25 11:17:28] local.INFO: Timetable: Array
+(
+    [monday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+    [wednesday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+)
+  
+[2024-05-25 11:17:28] local.INFO: availableTimes: Array
+(
+    [0] => 9
+    [1] => 10
+    [2] => 11
+    [3] => 12
+    [4] => 13
+    [5] => 14
+    [6] => 15
+    [7] => 16
+    [8] => 17
+    [9] => 18
+)
+  
+[2024-05-25 11:19:32] local.INFO: Requested Day: monday  
+[2024-05-25 11:19:32] local.INFO: Requested Time: 10:00  
+[2024-05-25 11:19:32] local.INFO: Timetable: Array
+(
+    [monday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+    [wednesday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+)
+  
+[2024-05-25 11:19:32] local.INFO: availableTimes: Array
+(
+    [0] => 9
+    [1] => 10
+    [2] => 11
+    [3] => 12
+    [4] => 13
+    [5] => 14
+    [6] => 15
+    [7] => 16
+    [8] => 17
+    [9] => 18
+)
+  
+[2024-05-25 11:19:54] local.INFO: Requested Day: monday  
+[2024-05-25 11:19:54] local.INFO: Requested Time: 10:01  
+[2024-05-25 11:19:54] local.INFO: Timetable: Array
+(
+    [monday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+    [wednesday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+)
+  
+[2024-05-25 11:19:54] local.INFO: availableTimes: Array
+(
+    [0] => 9
+    [1] => 10
+    [2] => 11
+    [3] => 12
+    [4] => 13
+    [5] => 14
+    [6] => 15
+    [7] => 16
+    [8] => 17
+    [9] => 18
+)
+  
+[2024-05-25 11:20:03] local.INFO: Requested Day: monday  
+[2024-05-25 11:20:03] local.INFO: Requested Time: 10:40  
+[2024-05-25 11:20:03] local.INFO: Timetable: Array
+(
+    [monday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+    [wednesday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+)
+  
+[2024-05-25 11:20:03] local.INFO: availableTimes: Array
+(
+    [0] => 9
+    [1] => 10
+    [2] => 11
+    [3] => 12
+    [4] => 13
+    [5] => 14
+    [6] => 15
+    [7] => 16
+    [8] => 17
+    [9] => 18
+)
+  
+[2024-05-25 11:20:12] local.INFO: Requested Day: monday  
+[2024-05-25 11:20:12] local.INFO: Requested Time: 11:00  
+[2024-05-25 11:20:12] local.INFO: Timetable: Array
+(
+    [monday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+    [wednesday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+)
+  
+[2024-05-25 11:20:12] local.INFO: availableTimes: Array
+(
+    [0] => 9
+    [1] => 10
+    [2] => 11
+    [3] => 12
+    [4] => 13
+    [5] => 14
+    [6] => 15
+    [7] => 16
+    [8] => 17
+    [9] => 18
+)
+  
+[2024-05-25 11:20:20] local.INFO: Requested Day: monday  
+[2024-05-25 11:20:20] local.INFO: Requested Time: 11:01  
+[2024-05-25 11:20:20] local.INFO: Timetable: Array
+(
+    [monday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+    [wednesday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+)
+  
+[2024-05-25 11:20:20] local.INFO: availableTimes: Array
+(
+    [0] => 9
+    [1] => 10
+    [2] => 11
+    [3] => 12
+    [4] => 13
+    [5] => 14
+    [6] => 15
+    [7] => 16
+    [8] => 17
+    [9] => 18
+)
+  
+[2024-05-25 11:21:49] local.INFO: Requested Day: monday  
+[2024-05-25 11:21:49] local.INFO: Requested Time: 12:01  
+[2024-05-25 11:21:49] local.INFO: Timetable: Array
+(
+    [monday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+    [wednesday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+)
+  
+[2024-05-25 11:21:49] local.INFO: availableTimes: Array
+(
+    [0] => 9
+    [1] => 10
+    [2] => 11
+    [3] => 12
+    [4] => 13
+    [5] => 14
+    [6] => 15
+    [7] => 16
+    [8] => 17
+    [9] => 18
+)
+  
+[2024-05-25 11:21:54] local.INFO: Requested Day: monday  
+[2024-05-25 11:21:54] local.INFO: Requested Time: 12:02  
+[2024-05-25 11:21:54] local.INFO: Timetable: Array
+(
+    [monday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+    [wednesday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+)
+  
+[2024-05-25 11:21:54] local.INFO: availableTimes: Array
+(
+    [0] => 9
+    [1] => 10
+    [2] => 11
+    [3] => 12
+    [4] => 13
+    [5] => 14
+    [6] => 15
+    [7] => 16
+    [8] => 17
+    [9] => 18
+)
+  
+[2024-05-25 11:22:13] local.INFO: Requested Day: monday  
+[2024-05-25 11:22:13] local.INFO: Requested Time: 19:02  
+[2024-05-25 11:22:13] local.INFO: Timetable: Array
+(
+    [monday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+    [wednesday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+)
+  
+[2024-05-25 11:22:13] local.INFO: availableTimes: Array
+(
+    [0] => 9
+    [1] => 10
+    [2] => 11
+    [3] => 12
+    [4] => 13
+    [5] => 14
+    [6] => 15
+    [7] => 16
+    [8] => 17
+    [9] => 18
+)
+  
+[2024-05-25 11:22:27] local.INFO: Requested Day: monday  
+[2024-05-25 11:22:27] local.INFO: Requested Time: 19:02  
+[2024-05-25 11:22:27] local.INFO: Timetable: Array
+(
+    [monday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+    [wednesday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+)
+  
+[2024-05-25 11:22:27] local.INFO: availableTimes: Array
+(
+    [0] => 9
+    [1] => 10
+    [2] => 11
+    [3] => 12
+    [4] => 13
+    [5] => 14
+    [6] => 15
+    [7] => 16
+    [8] => 17
+    [9] => 18
+)
+  
+[2024-05-25 11:22:34] local.INFO: Requested Day: monday  
+[2024-05-25 11:22:34] local.INFO: Requested Time: 19:01  
+[2024-05-25 11:22:34] local.INFO: Timetable: Array
+(
+    [monday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+    [wednesday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+)
+  
+[2024-05-25 11:22:34] local.INFO: availableTimes: Array
+(
+    [0] => 9
+    [1] => 10
+    [2] => 11
+    [3] => 12
+    [4] => 13
+    [5] => 14
+    [6] => 15
+    [7] => 16
+    [8] => 17
+    [9] => 18
+)
+  
+[2024-05-25 11:22:40] local.INFO: Requested Day: monday  
+[2024-05-25 11:22:40] local.INFO: Requested Time: 18:01  
+[2024-05-25 11:22:40] local.INFO: Timetable: Array
+(
+    [monday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+    [wednesday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+)
+  
+[2024-05-25 11:22:40] local.INFO: availableTimes: Array
+(
+    [0] => 9
+    [1] => 10
+    [2] => 11
+    [3] => 12
+    [4] => 13
+    [5] => 14
+    [6] => 15
+    [7] => 16
+    [8] => 17
+    [9] => 18
+)
+  
+[2024-05-25 11:23:01] local.INFO: Requested Day: monday  
+[2024-05-25 11:23:01] local.INFO: Requested Time: 18:20  
+[2024-05-25 11:23:01] local.INFO: Timetable: Array
+(
+    [monday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+    [wednesday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+)
+  
+[2024-05-25 11:23:01] local.INFO: availableTimes: Array
+(
+    [0] => 9
+    [1] => 10
+    [2] => 11
+    [3] => 12
+    [4] => 13
+    [5] => 14
+    [6] => 15
+    [7] => 16
+    [8] => 17
+    [9] => 18
+)
+  
+[2024-05-25 11:23:18] local.INFO: Requested Day: tuesday  
+[2024-05-25 11:23:18] local.INFO: Requested Time: 09:00  
+[2024-05-25 11:23:18] local.INFO: Timetable: Array
+(
+    [monday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+    [wednesday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+)
+  
+[2024-05-25 11:23:18] local.ERROR: Undefined array key "tuesday" {"exception":"[object] (ErrorException(code: 0): Undefined array key \"tuesday\" at E:\\Projects\\Laravel\\math-class-booking\\app\\Http\\Controllers\\BookingController.php:72)
+[stacktrace]
+#0 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(255): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Undefined array...', 'E:\\\\Projects\\\\Lar...', 72)
+#1 E:\\Projects\\Laravel\\math-class-booking\\app\\Http\\Controllers\\BookingController.php(72): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'Undefined array...', 'E:\\\\Projects\\\\Lar...', 72)
+#2 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\BookingController->bookClass(Object(Illuminate\\Http\\Request))
+#3 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('bookClass', Array)
+#4 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(260): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\BookingController), 'bookClass')
+#5 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#6 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(806): Illuminate\\Routing\\Route->run()
+#7 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#8 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#10 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#11 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(135): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#12 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#13 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#14 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#16 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#17 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#18 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#19 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#20 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#21 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#37 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#38 E:\\Projects\\Laravel\\math-class-booking\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#39 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('E:\\\\Projects\\\\Lar...')
+#40 {main}
+"} 
+[2024-05-25 11:25:13] local.INFO: Requested Day: tuesday  
+[2024-05-25 11:25:13] local.INFO: Requested Time: 09:00  
+[2024-05-25 11:25:13] local.INFO: Timetable: Array
+(
+    [monday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+    [wednesday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+)
+  
+[2024-05-25 11:25:17] local.INFO: Requested Day: tuesday  
+[2024-05-25 11:25:17] local.INFO: Requested Time: 09:00  
+[2024-05-25 11:25:17] local.INFO: Timetable: Array
+(
+    [monday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+    [wednesday] => Array
+        (
+            [0] => 9
+            [1] => 10
+            [2] => 11
+            [3] => 12
+            [4] => 13
+            [5] => 14
+            [6] => 15
+            [7] => 16
+            [8] => 17
+            [9] => 18
+        )
+
+)
+  
+[2024-05-25 11:28:45] local.ERROR: Class "App\Http\Controllers\Validator" not found {"exception":"[object] (Error(code: 0): Class \"App\\Http\\Controllers\\Validator\" not found at E:\\Projects\\Laravel\\math-class-booking\\app\\Http\\Controllers\\BookingController.php:42)
+[stacktrace]
+#0 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\BookingController->bookClass(Object(Illuminate\\Http\\Request))
+#1 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('bookClass', Array)
+#2 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(260): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\BookingController), 'bookClass')
+#3 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#4 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(806): Illuminate\\Routing\\Route->run()
+#5 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#6 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#7 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#8 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(135): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#10 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#11 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#12 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#13 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#14 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#15 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#16 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#17 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#18 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#19 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#35 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#36 E:\\Projects\\Laravel\\math-class-booking\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#37 E:\\Projects\\Laravel\\math-class-booking\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('E:\\\\Projects\\\\Lar...')
+#38 {main}
+"} 
