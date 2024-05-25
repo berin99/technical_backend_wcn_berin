@@ -13,7 +13,7 @@ Installation
 Clone the repo
 sh
 Copy code
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/berin99/technical_backend_wcn_berin
 Install PHP dependencies
 sh
 Copy code
